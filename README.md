@@ -81,7 +81,7 @@ ALERT]    (1) : config : parsing [/usr/local/etc/haproxy/haproxy.cfg:17]: Missin
 [ALERT]    (1) : config : Fatal errors found in configuration.
 ```
 - Solution
-    - Adding a blank line at the end of the haproxy.cfg file (Seriously)
+    - Added a blank line at the end of the haproxy.cfg file (Seriously)
 
 3. Invalid address:
 ```
@@ -100,7 +100,7 @@ no listening sockets available, shutting down
 AH00015: Unable to open logs
 ```
 - Solution
-    - Granting the httpd binary the capability to bind privileged ports (Ports below 1024, in our case 80)
+    - Granted the httpd binary the capability to bind privileged ports (Ports below 1024, in our case 80)
     ```
     setcap 'cap_net_bind_service=+ep' /usr/sbin/httpd
     ```
