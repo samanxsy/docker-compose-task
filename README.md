@@ -27,7 +27,7 @@ CentOS linux ajánlott“
 1. I started with reading about the centOS, and learning about its specifications and differents with other Linux distros I was familiar with.
 2.  Searched about the best Loadbalancer I could use for the purpose, and after deciding to go with HAproxy, I learned about the required configurations, and how to apply them. >> [haproxy.cfg](https://github.com/samanxsy/docker-compose-task/blob/master/haproxy.cfg)
 3. Wrote the Dockerfiles for the webserver and the load balancer. >> [Dockerfile-web](https://github.com/samanxsy/docker-compose-task/blob/master/Dockerfile-web) | [Dockerfile-LB](https://github.com/samanxsy/docker-compose-task/blob/master/Dockerfile-lb)
-4.  Wrote the Docker-compose file, and after some back and forth debugging, I could access the containers via the Loadbalancer, and the container ID was displayed. >> [docker-compose.yaml](https://github.com/samanxsy/docker-compose-task/blob/master/docker-compose.yaml)
+4.  Wrote the Docker-compose file, and after some back and forth debugging, I could access the containers via the Loadbalancer, and the container Hostname was displayed. >> [docker-compose.yaml](https://github.com/samanxsy/docker-compose-task/blob/master/docker-compose.yaml)
 ![docker-task](https://user-images.githubusercontent.com/118216325/234851671-d0d1ebb3-7d13-49eb-a100-b8b98e7f7fc2.png)
 * Extra steps:
 5. Created a Kubernetes cluster in AWS
