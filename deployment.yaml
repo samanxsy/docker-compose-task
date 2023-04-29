@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: webserver
-        image: public.ecr.aws/i8f8t1r2/saman-docker-task:ppwebserver
+        image: public.ecr.aws/i8f8t1r2/saman-docker-task:latest
         resources:
           limits:
             memory: "128Mi"
