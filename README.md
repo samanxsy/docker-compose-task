@@ -33,7 +33,7 @@ CentOS linux ajánlott“
 5. Created a Kubernetes cluster in AWS
 6. Pushed the webserver Image to the AWS ECR >> [Public ECR](public.ecr.aws/i8f8t1r2/saman-docker-task)
 7. Created a Deployment file, declaring for two instances of the webserver and a LoadBalancer >> [deployment,yaml](https://github.com/samanxsy/docker-compose-task/blob/master/deployment.yaml)
-8. Applying the deployment to my AWS EKS cluster >> [LoadBalancer Ingress](http://aa6a5f2d138ca4e8bba9bce9854aa724-404076512.eu-central-1.elb.amazonaws.com/)
+8. Applying the deployment to my AWS EKS cluster >> (I SHUT THEM DOWN DURING THE WEEKEND)
 
 ### AWS EKS
 After finishing the task, I decided to take one more step, and write a yaml file, and deploy the same functionality required by the Task, but utilizing AWS EKS, and Accessible through internet.
