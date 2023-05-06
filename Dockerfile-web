@@ -7,10 +7,12 @@ RUN yum update -y && \
 RUN echo "This is container ID: $(cat /proc/self/cgroup | grep "docker" | sed s/\\//\\n/g | tail -1)" > /var/www/html/index.html
 
 RUN useradd -u 1000 saman && \
-    chown -R saman:saman /var/www/html
+    chown -R saman:saman /var/www/html && \
+    chown -R saman:saman /var/log/httpd && \
+    chown -R saman:saman /run/httpd
 
-RUN chmod -R 777 /var/log/httpd && \
-    chmod -R 777 /run/httpd && \
+RUN chmod -R 740 /var/log/httpd && \
+    chmod -R 740 /run/httpd && \
     setcap 'cap_net_bind_service=+ep' /usr/sbin/httpd
 
 EXPOSE 80
