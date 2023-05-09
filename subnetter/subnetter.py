@@ -47,7 +47,7 @@ def subnetter(ip_address, cidr_notation, number_of_subnets_needed):
         print(f"\tBroadcast address: {information['broadcast_address']}")
         print("---------------------------------------------------")
 
-ip_address = str(input("Enter the network address >> "))
+ip_address = str(input("Enter the IP address >> "))
 cidr_notation = int(input("Enter the CIDR notation number >> "))
 number_of_subnets_needed = int(input("Enter the number of subnets you desire to create >> "))
 print("\n******************** SUBNETTER ********************\n")
