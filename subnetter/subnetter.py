@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+import os
+import time
 import math
 import ipaddress
 
@@ -13,7 +15,6 @@ def subnetter(ip_address, cidr_notation, number_of_subnets_needed):
 
     # Calculating the number of IP addresses in each subnet
     available_ips = 2 ** (32 - new_cidr_notation)
-
 
     # The Starting IP address as an integer
     starting_ip_int = int(ipaddress.IPv4Address(ip_address))
@@ -47,8 +48,45 @@ def subnetter(ip_address, cidr_notation, number_of_subnets_needed):
         print(f"\tBroadcast address: {information['broadcast_address']}")
         print("---------------------------------------------------")
 
-ip_address = str(input("Enter the IP address >> "))
-cidr_notation = int(input("Enter the CIDR notation number >> "))
-number_of_subnets_needed = int(input("Enter the number of subnets you desire to create >> "))
+while True:
+    ip_address = str(input("Enter the IP address >> "))
+    try:
+        ipaddress.IPv4Address(ip_address)
+        break
+    except ValueError:
+        print("\ninvalid IP address. please try again!")
+        time.sleep(1.5)
+        os.system("clear")
+
+while True:
+    try:
+        cidr_notation = int(input("Enter the CIDR notation number >> "))
+        if 1 <= cidr_notation <= 30:
+            break
+        else:
+            print("\nCIDR notation must have a value between 1 - 30. Please try again")
+            time.sleep(1.5)
+            os.system("clear")
+
+    except ValueError:
+        print("\nInvalid input! please enter a number")
+        time.sleep(1.5)
+        os.system("clear")
+while True:
+    try:
+        number_of_subnets_needed = int(input("Enter the number of subnets you desire to create >> "))
+        if number_of_subnets_needed > 0:
+            break
+        else:
+            print("\nNumber of subnets must be a positive number! Try again.")
+            time.sleep(1.5)
+            os.system("clear")
+
+    except ValueError:
+        print("Invalid output, Please enter a number!")
+        time.sleep(1.5)
+        os.system("clear")
+
+
 print("\n******************** SUBNETTER ********************\n")
 subnetter(ip_address, cidr_notation, number_of_subnets_needed)
