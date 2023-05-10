@@ -48,6 +48,7 @@ def subnetter(ip_address, cidr_notation, number_of_subnets_needed):
         print(f"\tBroadcast address: {information['broadcast_address']}")
         print("---------------------------------------------------")
 
+# Inputs and Error handlers
 while True:
     ip_address = str(input("Enter the IP address >> "))
     try:
@@ -72,6 +73,7 @@ while True:
         print("\nInvalid input! please enter a number")
         time.sleep(1.5)
         os.system("clear")
+
 while True:
     try:
         number_of_subnets_needed = int(input("Enter the number of subnets you desire to create >> "))
