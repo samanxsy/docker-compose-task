@@ -131,5 +131,4 @@ docker-compose build && docker-compose up
 ---
 ### Thats it!
 Once again, thanks for the opportunity, and thanks for your time! I'm Looking forward to talk about the task process and other stuff!
-##### Cheers, 
-##### Saman
+##### Cheers, Saman
